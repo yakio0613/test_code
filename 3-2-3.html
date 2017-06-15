@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Symbolオブジェクト</title>
+</head>
+<body>
+  <script>
+  	let sym1 = Symbol('sym');
+    let sym2 = Symbol('sym');
+    
+    console.log(typeof sym1);
+    console.log(sym1.toString());
+    console.log(sym1 === sym2);
+    
+    // Symbol([desc])
+    // 				desc:シンボルの説明 上記は引数がsymだが異なる。
+    
+    // console.log(sym1 + '');
+    // console.log(sym2 - 0);
+//     Symbolは型変換が出来ない。
+    
+    console.log(typeof !!sym1); // boolean型は出来る
+    
+//     使い方は定数の値として利用する。値が連番で意味が無いけど名前には意味があるとか。連番だと分かりづらいし、他で値が同じ物があったらバグになる。名前なら分かりやすいしバグになりにくい。
+  </script>
+</body>
+</html>
