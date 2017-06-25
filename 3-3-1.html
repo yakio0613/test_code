@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>spliceメソッド</title>
+</head>
+<body>
+  <script>
+  // array.splice(index, many, [,elem[, elm2, ...]])
+  //  array:配列 index:要素の抽出開始位置
+  //  many:取り出す要素数 elem1、elem2...:削除箇所に挿入する要素
+
+var data = ['Sato', 'Takae', 'Osada', 'Hio', 'Saitoh'];
+
+// 置き換え
+console.log(data.splice(3, 2,  'Yamada', 'Suzuki'));
+console.log(data);
+
+// 削除
+console.log(data.splice(3, 2));
+console.log(data);
+
+// 挿入 置き換える値を0にした場合。
+console.log(data.splice(1, 0, 'Tanaka'));
+console.log(data);
+
+  </script>
+</body>
+</html>
