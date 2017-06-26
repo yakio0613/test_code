@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>forEachメソッド</title>
+</head>
+<body>
+  <script>
+
+  //  array.forEach(callback [, that])
+  // array:配列オブジェクト callback:個々の要素を処理するための関数 that:関数callbackの中でthisが示すオブジェクト
+  var data = [2, 3, 4, 5];
+
+data.forEach(function (value, index, array) {
+// 第一引数　要素の値　第二引数　インデックス番号　第三引数　array
+// 使っていなければ省略可　上記の場合、indexとarray
+  console.log(value * value);
+});
+      </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>mapメソッド</title>
+</head>
+<body>
+  <script>
+
+  //  array.map(callback [, that])
+  // array:配列オブジェクト callback:個々の要素を加工するための関数 that:関数callbackの中でthisが示すオブジェクト
+  // 戻り値として加工した結果を返さなければならない。
+  var data = [2, 3, 4, 5];
+
+  var result = data.map(function (value, index, array) {
+// 第一引数　要素の値　第二引数　インデックス番号　第三引数　array
+// 使っていなければ省略可　上記の場合、indexとarray
+  return value * value;
+});
+
+// forEachと違って加工した結果を返している。新しい配列を作成する。
+console.log(result);
+      </script>
+</body>
+</html>

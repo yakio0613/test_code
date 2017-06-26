@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>someメソッド</title>
+</head>
+<body>
+  <script>
+
+  //  array.some(callback [, that])
+  // array:配列オブジェクト callback:個々の要素を判定するための関数 that:関数callbackの中でthisが示すオブジェクト
+  // 戻り値として条件に合致した結果をtrue,falseで返す。
+  var data = [4, 9, 16, 25];
+
+  var result = data.some(function (value, index, array) {
+// 第一引数　要素の値　第二引数　インデックス番号　第三引数　array
+// 使っていなければ省略可　上記の場合、indexとarray
+  return value % 3 === 0;
+});
+
+// 良く使う処理。1つでも条件に合致してるか？に対してeveryメソッドは全て合致してるかを判定する。
+if (result) {
+  console.log('3の倍数あり');
+} else {
+  console.log('3の倍数なし');
+}
+      </script>
+</body>
+</html>
