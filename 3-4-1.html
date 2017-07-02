@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>日付や時刻値を加算・減算する</title>
+</head>
+<body>
+  <script>
+var dat = new Date(2017, 4, 15, 11, 40);
+
+console.log(dat.toLocaleString());
+dat.setMonth(dat.getMonth() + 3);
+console.log(dat.toLocaleString());
+// 20という有効範囲を超えても自動的に遡って正しい日付を作り直す
+dat.setDate(dat.getDate() - 20);
+console.log(dat.toLocaleString());
+
+// その月の最終日を求める方法
+var dat2 = new Date(2017, 4, 15, 11, 40);
+console.log(dat2.toLocaleString());
+dat2.setMonth(dat2.getMonth() + 1);
+// 来月の0日目は今月の最終日と見なされる。
+dat2.setDate(0);
+console.log(dat2.toLocaleString());
+
+  </script>
+</body>
+</html>

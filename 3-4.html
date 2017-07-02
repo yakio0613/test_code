@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Dataオブジェクト</title>
+</head>
+<body>
+  <script>
+  // コンストラクターが必要 以下4つ
+
+// 生成された時点でのシステム日付をセット
+  var d = new Date();
+  // 日付文字列を元に生成　Sun Dec 04 2016 20:07:15みたいなのも可
+  var d = new Date('2016/12/04 20:07:15');
+  // 時分秒は省略可　月は 0 - 11で指定
+  var d = new Date(2016, 11, 4, 20, 07, 15, 500);
+// タイムスタンプ値で指定
+  var d = new Date(1480849635500);
+
+
+var dat = new Date(2016, 11, 25, 11, 37, 15, 999);
+
+console.log(dat);
+console.log(dat.getFullYear());
+console.log(dat.getMonth());
+console.log(dat.getDate());
+console.log(dat.getDay());
+console.log(dat.getDay());
+console.log(dat.getMinutes());
+console.log(dat.getSeconds());
+console.log(dat.getMilliseconds());
+console.log(dat.getTime());
+console.log(dat.getTimezoneOffset());
+
+var dat2 = new Date();
+
+dat2.setFullYear(2017);
+dat2.setMonth(7);
+dat2.setDate(5);
+dat2.setHours(11);
+dat2.setMinutes(37);
+dat2.setSeconds(15);
+dat2.setMilliseconds(513);
+
+console.log(dat2.toLocaleString());
+console.log(dat2.toUTCString());
+console.log(dat2.toDateString());
+console.log(dat2.toTimeString());
+console.log(dat2.toLocaleDateString());
+console.log(dat2.toTimeString());
+console.log(dat2.toString());
+console.log(dat2.toJSON());
+
+console.log(Date.parse('2016/11/05'));
+console.log(Date.UTC(2016, 11, 5));
+console.log(Date.now());
+  </script>
+</body>
+</html>
