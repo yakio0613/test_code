@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 対象の配列
+    var targetArray = ['鈴木', '田中', '高橋'];
+
+    // 田中が存在しているかどうか
+    if (targetArray.indexOf('田中') >= 0) {
+      console.log('田中が存在しております。');
+    } else {
+      console.log('田中は存在しておりません。');
+    }
+
+    // ES2017の新しい書き方
+    // 対象の配列
+    const targetArray = ['鈴木', '田中', '高橋'];
+
+    // 田中が存在しているかどうか
+    if (targetArray.includes('田中')) {
+      console.log('田中が存在しております。');
+    } else {
+      console.log('田中は存在しておりません。');
+    }     </script>
+    
+</body>
+</html>
