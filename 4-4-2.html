@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>引数のデフォルト値を設定する</title>
+</head>
+<body>
+  <script>
+    function getTriangle(base, height) {
+      if (base === undefined) { base = 1;}
+      if (height === undefined) { height = 1;}   
+      return base * height / 2;   
+    }
+    console.log(getTriangle(5));
+
+  </script>
+</body>
+</html>
