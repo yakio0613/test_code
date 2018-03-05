@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>高階関数</title>
+</head>
+<body>
+  <script>
+    // forEachメソッドを自分で実装したようなもの
+    // 高階関数を定義
+    function arrayWalk(data, f) {
+      for (var key in data) {
+        f(data[key], key);
+      }
+    }
+    
+    // 引数として配列の値とkey受け取る 配列を処理する関数
+    function showElement (value, key) {
+      console.log(key + ':' + value);
+    }
+
+    var ary = [1, 2, 4, 8, 16];
+    arrayWalk(ary, showElement);
+
+  </script>
+</body>
+</html>

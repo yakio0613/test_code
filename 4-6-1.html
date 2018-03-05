@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>再帰関数</title>
+</head>
+<body>
+  <script>
+    function factorial(n) {
+      // 階乗の概念を理解する必要がある。
+      if (n != 0) { return n * factorial(n - 1);}
+      // 無限ループになるので、1を返す
+      return 1;
+    }
+
+    console.log(factorial(5));
+
+  </script>
+</body>
+</html>

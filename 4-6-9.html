@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>匿名関数</title>
+</head>
+<body>
+  <script>
+    // forEachメソッドを自分で実装したようなもの
+    // 高階関数を定義
+    function arrayWalk(data, f) {
+      for (var key in data) {
+        f(data[key], key);
+      }
+    }
+
+    var ary = [1, 2, 4, 8, 16];
+    arrayWalk(ary, 
+    function sumElement (value, key) {
+      console.log(key + ':' + value);
+    });
+
+
+  </script>
+</body>
+</html>
