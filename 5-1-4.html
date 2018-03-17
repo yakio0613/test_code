@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>コンストラクターの強制的な呼び出し</title>
+</head>
+<body>
+  <script>
+
+    // noconstructor
+    var Member = function (firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    };
+
+    var m = Member('権兵衛, 佐助');
+
+    console.log(m);
+    console.log(firstName);
+    console.log(m.lastName);
+  </script>
+</body>
+</html>

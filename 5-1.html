@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オブジェクト指向</title>
+</head>
+<body>
+  <script>
+    var Member = function (firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.getName = function () {
+        return this.lastName + '' + this.firstName;
+      }
+    };
+
+    var mem = new Member('鱒', '長谷');
+    console.log(mem.getName());
+  </script>
+</body>
+</html>
