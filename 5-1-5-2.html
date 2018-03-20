@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>プロトタイプの変更をリアルタイムに認識</title>
+</head>
+<body>
+  <script>
+
+    var Member = function (firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    };
+
+    var mem = new Member('権兵衛', '山田');
+    
+    // インスタンス化の後にメソッドを追加
+    Member.prototype.getName = function () {
+      return this.lastName + ' ' + this.firstName;
+    };
+
+    console.log(mem.getName());
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>静的プロパティ・静的メソッド</title>
+</head>
+<body>
+  <script>
+    // コンストラクター
+    var Area = function () {}; 
+    
+    // 静的プロパティ
+    Area.version = 1.0;
+    
+    // 静的メソッド
+    Area.triAngle = function (base, height) {
+      return base * height / 2;
+    };
+
+    // 静的メソッド
+    Area.diamond = function (width, height) {
+      return width * height / 2;
+    };
+
+    // Areaクラスのバージョン
+    console.log(Area.version);
+    console.log(Area.triAngle(10, 10));
+    console.log(Area.diamond(10, 10));
+
+    var A = new Area();
+    
+    // インスタンスから呼び出してもエラーになる。
+    console.log(A.diamond(10, 10));
+
+  </script>
+</body>
+</html>

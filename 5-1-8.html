@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オブジェクトリテラルでプロトタイプを定義</title>
+</head>
+<body>
+  <script>
+    var Member = function (firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    };
+    
+    Member.prototype =  {
+      getName: function () {
+        return this.firstName + '' + this.lastName;
+      },
+      toString: function () {
+         return this.firstName + this.lastName;
+      }      
+    };
+
+  </script>
+</body>
+</html>
