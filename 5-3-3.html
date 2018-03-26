@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オブジェクトの型を判定 constructor instanceof isPrototypeOf</title>
+</head>
+<body>
+  <script>
+    var Animal = function () {};
+    var Hamster = function () {};
+
+    Hamster.prototype = new Animal();
+    
+    var a = new Animal();
+    var h = new Hamster();
+
+    // constructorは継承元のクラス
+    console.log(a.constructor === Animal);
+    console.log(h.constructor === Animal);
+    console.log(h.constructor === Hamster);
+    console.log(h instanceof Animal);
+    console.log(h instanceof Hamster);
+    console.log(Hamster.isPrototypeOf(h));
+    console.log(Animal.isPrototypeOf(h));
+
+  </script>
+</body>
+</html>

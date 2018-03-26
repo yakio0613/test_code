@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オブジェクトの型を判定 in演算子</title>
+</head>
+<body>
+  <script>
+    var obj = {
+      hoge: function () {},
+      foo: function () {}
+    }
+
+    // constructorは継承元のクラス
+    console.log('hoge' in obj);
+    console.log('piyo' in obj);
+
+  </script>
+</body>
+</html>

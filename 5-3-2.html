@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>継承は動的に変更可能</title>
+</head>
+<body>
+  <script>
+    var Animal = function (){};
+
+    Animal.prototype = {
+      walk: function () {
+        console.log('トコトコ');
+      }
+    };
+    
+    var SuperAnimal = function () {};
+    SuperAnimal.prototype = {
+      walk: function () {
+        console.log('ダダダダダダ');
+      }
+    };
+    
+    var Dog = function () {};
+    // 暗黙の参照でオブジェクトからbarkメソッドを参照した後にWalkも参照する    
+    Dog.prototype = new Animal;
+    
+    var d1 = new Dog();
+
+    d1.walk();
+
+    Dog.prototype = new SuperAnimal();
+    var d2 =  new Dog();
+    d2.walk();
+    d1.walk();
+
+  </script>
+</body>
+</html>
